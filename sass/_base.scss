@@ -1,0 +1,121 @@
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+// - Soft orange: hsl(35, 77%, 62%)
+// - Soft red: hsl(5, 85%, 63%)
+
+// ### Neutral
+
+// Off-white: hsl(36, 100%, 99%)
+// Grayish blue: hsl(233, 8%, 79%)
+// Dark grayish blue: hsl(236, 13%, 42%)
+// Very dark blue: hsl(240, 100%, 5%)
+
+//PRIMARY
+$color-primary-orange: #e9ab53;
+$color-primary-red: #f15e50;
+
+//GREY
+$color-background: #fffdfa;
+$color-grey: #5d5f79;
+$color-grey-light: #c5c6ce;
+$color-blue-dark: #00001a;
+
+//BREAKPOINTS
+
+$bp-large: 65.75em; //1050px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //500px
+//
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $color-grey;
+  background-color: $color-background;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 2rem auto;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+  }
+}
+
+.section-hero {
+  margin: 5rem 0 6rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: $bp-small) {
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+}
+
+// mobile menu
+
+.darken {
+  @media only screen and (max-width: $bp-medium) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color-blue-dark, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}

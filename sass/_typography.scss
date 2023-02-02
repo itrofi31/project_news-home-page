@@ -1,0 +1,25 @@
+.heading-1 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: $color-blue-dark;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  &--dark {
+    font-size: 1.8rem;
+    color: $color-blue-dark;
+  }
+
+  &--light {
+    font-size: 2rem;
+    color: $color-background;
+    margin-bottom: 2rem;
+  }
+}
+
+.heading-3 {
+  font-size: 3.2rem;
+  color: $color-primary-orange;
+}
