@@ -118,22 +118,24 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 2;
-  display: none;
-  display: flex;
-  align-items: center; }
-  .btn-menu.active {
-    display: block; }
-    .btn-menu.active .btn-menu__icon--open {
-      display: none; }
-    .btn-menu.active .btn-menu__icon--close {
-      display: block; }
-  .btn-menu__icon {
-    width: 100%; }
-  .btn-menu__icon--close {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none; }
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .btn-menu {
+      display: flex;
+      align-items: center; }
+      .btn-menu.active {
+        display: block; }
+        .btn-menu.active .btn-menu__icon--open {
+          display: none; }
+        .btn-menu.active .btn-menu__icon--close {
+          display: block; }
+      .btn-menu__icon {
+        width: 100%; }
+      .btn-menu__icon--close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none; } }
 
 .web {
   grid-column: 1 / 3;

@@ -65,27 +65,28 @@
   position: relative;
   z-index: 2;
   display: none;
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    align-items: center;
+    &.active {
+      display: block;
+      .btn-menu__icon--open {
+        display: none;
+      }
+      .btn-menu__icon--close {
+        display: block;
+      }
+    }
+    &__icon {
+      width: 100%;
+    }
 
-  display: flex;
-  align-items: center;
-  &.active {
-    display: block;
-    .btn-menu__icon--open {
+    &__icon--close {
+      position: absolute;
+      top: 0;
+      left: 0;
       display: none;
     }
-    .btn-menu__icon--close {
-      display: block;
-    }
-  }
-  &__icon {
-    width: 100%;
-  }
-
-  &__icon--close {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
   }
 }
 
